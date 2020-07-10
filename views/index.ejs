@@ -1,4 +1,28 @@
-<%- include('header') -%>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-<%- include('footer') -%>
+<%- include('start') -%>
+<main>
+  <!-- Sections to be looped over to display all props in the db -->
+  <section class="new-prop-section">
+    <div class="m-5 row">
+      <div class="col">
+        <h3>Title</h3>
+        <p>Agent</p>
+      </div>
+      <div class="col">
+        <p>House image</p>
+      </div>
+      <div class="col">
+        <p>Applied status</p>
+        <p>Response status</p>
+      </div>
+      <div class="col">
+        <p>Notes</p>
+      </div>
+    </div>
+  </section>
+  <article class="useful-buttons">
+    <div class="m-5 row">
+      <button class="btn btn-primary">Add Property</button>
+    </div>
+  </article>
+</main>
+<%- include('end') -%>
