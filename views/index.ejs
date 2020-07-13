@@ -1,9 +1,9 @@
 <%- include('start') -%>
 <main>
   <!-- Sections to be looped over to display all props in the db -->
-  <section class="new-prop-section">
-    <div class="m-5 row">
-      <div class="col">
+  <section class="new-prop-section mb-2">
+    <div class="row m-1">
+      <div class="col-sm-12 col-md">
         <h3>Title</h3>
         <p>Agent</p>
       </div>
@@ -18,11 +18,17 @@
         <p>Notes</p>
       </div>
     </div>
+    <div class="row m-1">
+      <button class="btn btn-danger ml-auto">Remove</button>
+    </div>
   </section>
   <article class="useful-buttons">
-    <div class="m-5 row">
-      <button class="btn btn-primary">Add Property</button>
-    </div>
+    <form method="POST" action="" class="p-2">
+      <div class="row m-auto d-flex form-group">
+        <input class="flex-fill form-control col-8-sm mb-2" id="propUrlInput" type="text" placeholder="Property URL">
+        <button class="btn btn-primary m-auto col-4-sm">Add Property</button>
+      </div>
+    </form>
   </article>
 </main>
 <%- include('end') -%>

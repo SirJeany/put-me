@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
+  padding: 1em;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+
+.new-prop-section {
+  border: solid gray 2px;
+}
+
+.useful-buttons {
+  border: solid lightblue 2px;
+}
+
+.form-group {
+  max-width: 450px;
 }
