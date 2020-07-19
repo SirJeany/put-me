@@ -3,10 +3,10 @@ const puppeteer = require('puppeteer');
 // Puppeteer is a headless browser surfer that we can use to surf and return data from a site.
 
 // Async function to be used to return a promise:
-const scrapeProp24 = async() => {
+const scrapeProp24 = async(url) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.property24.com/to-rent/rondebosch/cape-town/western-cape/8682/106290453?plId=607840&plt=2');
+    await page.goto(url);
     // above self explanitory
 
     // Here is where we search the page for the [generalised] page and find the elements we want.
