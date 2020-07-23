@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 const scraper = require('../utils/scraper');
 const { prependListener } = require('../app');
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,6 +25,9 @@ router.post('/', function(req, res, next) {
       })
       .catch(err => reject('Prop24 scrape failed'))
   });
+
+  // Local storage test:
+  localStorage.setItem('myFirstKey', 'myFirstValue');
 
 
   // In future there might be more than one website that we collect data (promises) from
