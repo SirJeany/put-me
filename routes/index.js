@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Put me' });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/add', function(req, res, next) {
   let url = req.body.propUrlInput;
 
   // Call to ./utils/scraper to scrape the link provided:

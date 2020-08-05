@@ -1,6 +1,7 @@
 <%- include('start') -%>
 
 <main>
+    
     <h3>
         <%= price %>
     </h3>
@@ -12,6 +13,13 @@
         Place: <br>
         <%= place %>
     </p>
+
+    <form method="post" action="/add">
+        <div class="row d-flex form-group">
+            <button class="btn btn-primary m-3">Add Property</button>
+            <button class="btn btn-danger m-3">Cancel</button>
+        </div>
+    </form>
 </main>
 
 <%- include('end') -%>

@@ -9,6 +9,7 @@ let mongoose = require('mongoose');
 const scraper = require('./utils/scraper');
 
 var indexRouter = require('./routes/index');
+var addRouter = require('./routes/add');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -29,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
-app.use('/add', indexRouter);
+app.use('/add', addRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
